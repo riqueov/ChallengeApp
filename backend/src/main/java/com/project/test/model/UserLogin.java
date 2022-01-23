@@ -1,6 +1,8 @@
 package com.project.test.model;
 
 public class UserLogin {
+	
+	private long idUser;
 
 	private String name;
 	
@@ -9,6 +11,16 @@ public class UserLogin {
 	private String password;
 	
 	private String token;
+	
+	
+
+	public long getIdUser() {
+		return idUser;
+	}
+
+	public void setIdUser(long idUser) {
+		this.idUser = idUser;
+	}
 
 	public String getName() {
 		return name;

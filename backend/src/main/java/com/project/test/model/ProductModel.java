@@ -30,7 +30,7 @@ public class ProductModel {
 	
 	@ManyToOne
 	@JoinColumn(name = "id_user")
-	@JsonIgnoreProperties("product")
+	@JsonIgnoreProperties("productModel")
 	private UserModel userModel;
 	
 

@@ -34,11 +34,13 @@ public class UserModel {
 	@Size(min = 5, max = 100)
 	private String password;
 	
-	@OneToMany(mappedBy = "userModel", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "userModel", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("userModel")
 	private List<ProductModel> product = new ArrayList<>();
 
 	
+	
+
 	public long getIdUser() {
 		return idUser;
 	}
