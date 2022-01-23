@@ -1,0 +1,31 @@
+* {
+  text-decoration: none;
+}
+
+.form-control:focus {
+  border-color: #023047;
+  box-shadow: 0 0 10px #b9b9b9;
+}
+
+.inputof{
+  border-color: #023047;
+}
+
+
+.titulo {
+  text-align: center;
+  color: #023047;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.acolor {
+  color: #219EBC;
+  text-decoration: none;
+}
+
+.esqueci:hover {
+  color: #FFB703;
+}
+
+
