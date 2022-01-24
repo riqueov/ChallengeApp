@@ -1,1 +1,5 @@
+<app-menu *ngIf='auth.Logged()'></app-menu>
+
 <router-outlet></router-outlet>
+
+<app-footer *ngIf='auth.Logged()'></app-footer>

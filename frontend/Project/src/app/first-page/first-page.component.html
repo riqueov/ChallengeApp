@@ -1,0 +1,94 @@
+<div class="container-fluid">
+
+  <div class="row bg-black d-flex align-items-center">
+      <div class="col-md-6">
+
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-6 text-white">
+                  <h1>Obrigado por nos escolher!</h1>
+                  <h5>Clique no botão para adicionar itens em sua lista.</h5>
+              </div>
+          </div>
+
+          <div class="row d-flex justify-content-center mt-3 mb-5">
+               <div class="col-md-6 text-white">
+                  <button class="btn btn-light ps-4 pe-4" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adicionar Item</button>
+              </div>
+          </div>
+
+      </div>
+
+      <div class=" col-md-6 d-flex justify-content-center">
+          <img src="../../assets/Upgrade-pana.svg" alt="" width="300px" height="300px">
+      </div>
+
+  </div>
+
+</div>
+
+<div class="container mb-5 mt-5" id="postagem">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active text-secondary font-weight-bold" id="list-item" data-toggle="tab" href="#ProductList" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">
+        Sua lista:</a>
+  </li>
+</ul>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Fornecedor</th>
+      <th scope="col">Preço</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let product of listProduct'>
+      <th>{{product.idProduct}}</th>
+      <td>{{product.nameProduct}}</td>
+      <td>{{product.supplier}}</td>
+      <td>{{product.price}}</td>
+      <td> 
+        <button class="btn btn-danger ms-3" [routerLink]="['/product-delete', product.idProduct]" >Deletar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Catalogue mais um item:</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nome do produto/item:</label>
+            <input [(ngModel)]='product.nameProduct' type="text" class="form-control" id="nameProduct">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Fornecedor:</label>
+            <input [(ngModel)]='product.supplier' type="text" class="form-control" id="Fornecedor">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Preço:</label>
+            <input [(ngModel)]='product.price' type="number" class="form-control" id="Preco">
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)='saveProduct()'>Salvar Item</button>
+      </div>
+    </div>
+  </div>
+</div>

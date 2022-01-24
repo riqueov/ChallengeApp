@@ -36,7 +36,7 @@ public class UserModel {
 	
 	@OneToMany(mappedBy = "userModel", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("userModel")
-	private List<ProductModel> product = new ArrayList<>();
+	private List<ProductModel> productModel;
 
 	
 	
@@ -74,11 +74,11 @@ public class UserModel {
 	}
 
 	public List<ProductModel> getProduct() {
-		return product;
+		return productModel;
 	}
 
 	public void setProduct(List<ProductModel> product) {
-		this.product = product;
+		this.productModel = product;
 	}
 
 		

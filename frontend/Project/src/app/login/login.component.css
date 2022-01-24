@@ -3,18 +3,18 @@
 }
 
 .form-control:focus {
-  border-color: #023047;
+  border-color: rgb(19, 19, 19);
   box-shadow: 0 0 10px #b9b9b9;
 }
 
 .inputof{
-  border-color: #023047;
+  border-color: rgb(19, 19, 19);
 }
 
 
 .titulo {
   text-align: center;
-  color: #023047;
+  color: rgb(19, 19, 19);
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -24,8 +24,18 @@
   text-decoration: none;
 }
 
-.esqueci:hover {
-  color: #FFB703;
+.acolor:hover {
+  color: #03ffff;
 }
 
+.acolor2 {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
 
+.acolor2:hover {
+  background: rgb(0, 184, 24);
+  color: #000;
+  font-weight: 400;
+}
